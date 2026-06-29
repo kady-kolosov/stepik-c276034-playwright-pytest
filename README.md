@@ -1,18 +1,14 @@
-# stepik-c276034-playwright-pytest
-
-## [Курс Stepik: Автоматизация тестирования с Playwright и PyTest](https://stepik.org/course/276034/promo)
+# [Курс Stepik: Автоматизация тестирования с Playwright и PyTest](https://stepik.org/course/276034/promo)
 
 ## Стек
-
+- Python
+- Pytest
 - Playwright
-- PyTest
-- Requests
 - Allure
 
-## Старт
+## Создать и активировать виртуальное окружение
 
-### Создать и активировать виртуальное окружение
-
+### Mac OS
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -24,13 +20,49 @@ source .venv/bin/activate
 source .venv/bin/activate
 ```
 
-### Установить зависимости
+### Windows
+```bash
+python -m venv .venv
+source .venv/Scripts/activate
+```
 
+или
+
+```bash
+"/c/Program Files/Python314/python.exe" -m venv .venv
+source .venv/Scripts/activate
+```
+
+## Проверка работоспособности
+
+```bash
+python --version
+which python
+pip --version
+```
+
+## Установить зависимости
+
+### Mac OS
 ```bash
 .venv/bin/python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
-### Установить браузеры Playwright
+
+### Windows
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## Установить браузеры Playwright
+
 ```bash
 playwright install
+```
+
+## Зафиксировать новые зависимости в файле `requirements.txt`
+
+```bash
+pip freeze > requirements.txt
 ```
